@@ -22,7 +22,6 @@ def simple_code(version=1, box_size=10, border=4):
 
     # Creating the QR code image
     img = qr.make_image(fill_color="black", back_color="white")
-    img.show()
 
     return img
 
@@ -72,13 +71,10 @@ def logo_code(version=1, box_size=10, border=4, max_logo_size=50, preserve_aspec
     y_max = int((code_height / 2) + (final_logo_size[1] / 2))
 
     # resizing logo
-    logo.show()
     logo = logo.resize((x_max - x_min, y_max - y_min))
-    logo.show()
 
-    img.show()
+    # Pasting logo onto 
     img.paste(logo, (x_min, y_min, x_max, y_max))
-    img.show()
 
     return img
 
@@ -109,3 +105,5 @@ if __name__ == '__main__':
             max_logo_size = int(input("Number of pixels wide the logo should be: "))
             aspect_preserve = input("Preserve logo aspect ratio [t]/[f]: ") == "t"
             code_img = logo_code(version, box_size, border_size, max_logo_size, aspect_preserve)
+
+    code_img.show()
