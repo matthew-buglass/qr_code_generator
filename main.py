@@ -43,10 +43,10 @@ def logo_code(version=1, box_size=10, border=4, max_logo_size=50, preserve_aspec
 
     if preserve_aspect:
         if logo_width > logo_height:
-            scale_ratio = logo_width / max_logo_size
+            scale_ratio = max_logo_size / logo_width
             final_logo_size = int(logo_width * scale_ratio), int(logo_height * scale_ratio)
         else:
-            scale_ratio = logo_height / max_logo_size
+            scale_ratio = max_logo_size / logo_height
             final_logo_size = int(logo_width * scale_ratio), int(logo_height * scale_ratio)
     else:
         final_logo_size = max_logo_size, max_logo_size
@@ -91,7 +91,7 @@ if __name__ == '__main__':
     print(welcome_string)
     type = int(input("Please enter the code number: "))
 
-    settings = input("Would you like [d]efault or [c]ustom settings?")
+    settings = input("Would you like [d]efault or [c]ustom settings? ")
 
     if settings == "d":
         if type == 1:
