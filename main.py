@@ -74,7 +74,7 @@ def logo_code(version=1, box_size=10, border=4, max_logo_size=50, preserve_aspec
     logo = logo.resize((x_max - x_min, y_max - y_min))
 
     # Pasting logo onto 
-    img.paste(logo, (x_min, y_min, x_max, y_max))
+    img.paste(logo, (x_min, y_min, x_max, y_max), mask=logo)
 
     return img
 
