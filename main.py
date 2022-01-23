@@ -107,3 +107,16 @@ if __name__ == '__main__':
             code_img = logo_code(version, box_size, border_size, max_logo_size, aspect_preserve)
 
     code_img.show()
+	
+    save = input("Would you like to save the image? [y]es or [n]o? ")
+	
+    if save == "y":
+        path = fd.asksaveasfilename(title="How would you like to save the image?",
+                                    filetypes=[("png", ".png"),
+                                               ("jpeg", ".jpeg")],
+                                    defaultextension=".png")
+		
+        code_img.save(path)
+		
+		
+		
