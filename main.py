@@ -10,11 +10,11 @@ def simple_code(version=1, box_size=10, border=4):
     """
     Create a basic QR Code
     
-    @param version controls the size of the qr code [1-40] 1 being the smallest at a 21x21 matrix
-    @param box_size controls how many pixels each square in the code is
-    @param border controls how many boxes thick the border is (ex: box_size=10 and border=4 gives a 40 pixel border)
+    :param version: controls the size of the qr code [1-40] 1 being the smallest at a 21x21 matrix
+    :param box_size: controls how many pixels each square in the code is
+    :param border: controls how many boxes thick the border is (ex: box_size=10 and border=4 gives a 40 pixel border)
     
-    @return an image of the generated qr code
+    :return: an image of the generated qr code
     """
     print("Creating a simple code")
     url = input("What would you like to embed? ")
@@ -39,13 +39,13 @@ def logo_code(version=1, box_size=10, border=4, max_logo_size=50, preserve_aspec
     """
     Create a QR Code with an image embedded in it
     
-    @param version controls the size of the qr code [1-40] 1 being the smallest at a 21x21 matrix
-    @param box_size controls how many pixels each square in the code is
-    @param border controls how many boxes thick the border is (ex: box_size=10 and border=4 gives a 40 pixel border)
-    @param max_logo_size the maximum nuber of pixels in any direction that the image will be
-    @param preserve_aspect a boolean to control whether the aspect ratio of the image will be preserved
+    :param version: controls the size of the qr code [1-40] 1 being the smallest at a 21x21 matrix
+    :param box_size: controls how many pixels each square in the code is
+    :param border: controls how many boxes thick the border is (ex: box_size=10 and border=4 gives a 40 pixel border)
+    :param max_logo_size: the maximum nuber of pixels in any direction that the image will be
+    :param preserve_aspect: a boolean to control whether the aspect ratio of the image will be preserved
     
-    @return an image of the generated qr code
+    :return: an image of the generated qr code
     """
     print("Creating a code with an image in the center")
     url = input("What would you like to embed? ")
